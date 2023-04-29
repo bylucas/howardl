@@ -1,0 +1,54 @@
+// =======================
+// Button
+// =======================
+
+%btn {
+  outline: 0 none;
+  color: $white;
+  border-radius: $radius;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $alt-font;
+  font-size: $third;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  white-space: nowrap;
+  padding: 10px;
+
+  &:hover,
+  &:focus {
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $error-color;
+    }
+  }
+}
+
+@mixin button-bg($bg) {
+  background: $bg;
+
+  @include media(900) {
+    &:hover {
+      background: $hover-color;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+//Add button types
+button,
+.but,
+.submit,
+.wpcf7-submit {
+  @extend %btn;
+  @include button-bg($button-background);
+  margin-bottom: 0; //to line-up button and input class="but" on the test page
+}

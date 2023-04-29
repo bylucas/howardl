@@ -1,0 +1,107 @@
+.hamburger {
+  padding: 10px 10px 0 15px;
+  //display: inline-block;
+  cursor: pointer;
+  // position: absolute;
+  // top: -10px;
+  // right: 10px;
+
+  transition-property: opacity, filter;
+  transition-duration: .18s;
+  transition-timing-function: linear;
+
+  // Normalize (<button>)
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+
+  &:hover {
+    opacity: 0.4;
+}
+}
+
+.hamburger-box {
+  width: 25px;
+  height: 15px * 3 + 3px * 2;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: math.div(4px, -2);
+
+  &,
+  &::before,
+  &::after {
+    width: 33px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
+
+  &::before {
+    top: (6px + 4px) * -1;
+  }
+
+  &::after {
+    bottom: (6px + 4px) * -1;
+  }
+}
+
+//Squeeze
+
+.hamburger--squeeze {
+
+ .hamburger-inner {
+      transition-duration: 0.1s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+      &::before {
+        transition: top 0.1s 0.14s ease,
+                    opacity 0.1s ease;
+      }
+
+      &::after {
+        transition: bottom 0.1s 0.14s ease,
+                    transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+    }
+
+    &.is-active {
+      .hamburger-inner {
+        transform: rotate(45deg);
+        transition-delay: 0.14s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &::before {
+          top: 0;
+          opacity: 0;
+          transition: top 0.1s ease,
+                      opacity 0.1s 0.14s ease;
+        }
+
+        &::after {
+          bottom: 0;
+          transform: rotate(-90deg);
+          transition: bottom 0.1s ease,
+                      transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+      }
+    }
+  }

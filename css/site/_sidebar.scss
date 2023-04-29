@@ -1,0 +1,33 @@
+aside {
+  margin: $spacer 0;
+  
+  .widget_search {
+    margin-bottom: $spacer;
+    input {
+    padding: 15px;
+  }
+  }
+
+  h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  }
+
+  li {
+    font-size: $third;
+  }
+}
+
+@include media(600) {
+   .widget_search {
+    max-width: 300px;
+  }
+}
+
+@include media(900) {
+
+  aside {
+    margin-top: $spacer*4.8;
+  }
+}

@@ -1,0 +1,69 @@
+.post-header,
+.page-header {
+margin-top: $spacer;
+h1 {
+  margin-bottom: 0;
+}
+
+.posted-on,
+.cat-links {
+  font-size: $secondary;
+  font-style: italic;
+  font-family: $alt-font;
+}
+}
+
+.post-content,
+.page-content {
+  padding: 2rem 0 1rem 0;
+  border-bottom: 1px dashed $light-gray;
+  margin-bottom: $spacer;
+  overflow: hidden;
+
+  .post-intro {
+    font-size: $lead;
+    font-weight: 200;
+    margin-bottom: .5rem;
+  }
+
+  .wp-block-image {
+    margin: $spacer 0 $spacer;
+  }
+
+  h2 {
+  margin: 10px 0;
+  }
+
+  p {
+    margin-bottom: $spacer;
+  }
+
+  h3 {
+  margin: 10px 0;
+  }
+
+  .wp-block-quote {
+    border-left: 4px solid $link-color;
+    margin: $spacer 0; 
+  }
+
+  ul, ol {
+   padding-left: 40px;
+  }
+
+  li ul, ol {
+     padding-left: 10px;
+  }
+
+  h4 {
+  margin: 10px 0;
+  }
+}
+
+@include media(900) {
+  .post-content,
+.page-content {
+  padding: 2.4rem 0 1rem 100px;
+  margin-bottom: $spacer*1.5;
+}
+}

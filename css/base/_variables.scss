@@ -1,0 +1,52 @@
+// =======================
+// Variables
+// =======================
+
+// TYPOGRAPHY ============================
+$font: 'Work Sans', sans-serif;
+$heading-font: $font;
+$alt-font: $heading-font;
+$code-font: 'Source Code Pro', monospace;
+$icon-font: "";
+
+$font-size: 1.2rem;
+
+$lead: $font-size * 1.2;
+$secondary: math.div($font-size, 1.2);
+$third: math.div($font-size, 1.4);
+
+// SIZE ==================================
+$radius: 5px;
+//set a consistant margin
+$spacer: 2rem;
+
+// COLOR =================================
+$black: #1c0301;
+$white: #fff;
+$dark-gray: #464747;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+// Font Colors
+$font-color: $dark-gray;
+$link-color: #376CC6;
+$hover-color: #B05C4A;
+$comment-color: $link-color;
+// Background Colors
+$background: $light-gray;
+$light-background: lighten($background, 11%);
+
+// Form Colors
+$input-background: #F9F9F9;
+$button-background: $link-color;
+
+$error-color: #ba221d;
+$alert-color: #bd912f;
+$success-color: #3f913a;
+
+// ELEMENTS ===============================
+// Border
+$border: 1px solid $light-gray;
+
+$site-main: 100%;
+$site-sidebar: 25%;

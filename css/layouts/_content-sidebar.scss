@@ -1,0 +1,52 @@
+$site-main: 100%;
+$site-sidebar: 25%;
+
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+.wrapper {
+padding: 0 4%;
+}
+
+@include media(900) {
+// .wrapper {
+//   display: grid;
+//   grid-template-columns: auto ($site-sidebar);
+//   grid-template-areas:
+//     "header header"
+//     "main sidebar"
+//     "footer footer";
+// }
+
+// .site-header {
+//   grid-area: header;
+// }
+
+// .main {
+//   grid-area: main;
+// }
+
+// aside {
+//   grid-area: sidebar;
+//   margin-left: 40px;
+// }
+
+// .site-footer {
+//   grid-area: footer;
+// }
+
+.wrapper {
+max-width: 960px;
+margin: 0 auto;
+padding: 0 2%
+}
+}
+
+//@import "no-sidebar";

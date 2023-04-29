@@ -1,0 +1,84 @@
+@use "sass:math";
+
+//import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+@import "reset";
+@import "bourbon";
+
+@import "base/variables";
+@import "base/mixins";
+html {
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: #BDB6E4;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  color: $font-color;
+  font-family: $font;
+  font-weight: 400;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: $font-size;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $link-color;
+  }
+}
+
+//Link hovers
+@include media(900) {
+  a {
+    transition: color 0.3s ease-in 0.1s;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+  body {
+  font-weight: 300;
+}
+}
+
+// ==============
+//   Base styles
+//  =============
+@import "base/utilities";
+@import "base/typography";
+@import "base/media";
+@import "base/form";
+@import "base/button";
+@import "base/table";
+
+
+@import "site/site";
+@import "site/menu";
+@import "site/hamburger";
+@import "site/index";
+@import "site/post";
+@import "site/comments";
+//@import "site/sidebar";
+@import "site/pages";
+@import "site/prism";
+@import "site/related-posts";
+
+@import "layouts/content-sidebar";
+
+@import "site/print";

@@ -1,0 +1,158 @@
+.comments-area {
+
+  h2 {
+  font-size: 1.6rem;
+  margin: 0 0 30px 0;
+  text-align: center;
+  }
+
+  .comment {
+    margin-bottom: $spacer*1.3;
+    border: 1px dashed $light-gray;
+    border-radius: $radius;
+  }
+
+  article {
+    margin-bottom: 20px;
+  }
+
+  .even {
+    //background: #F7DAFD;
+    padding: 15px 15px 5px 15px;
+    //border-radius: $radius;
+  }
+
+  .odd {
+    //background: #FBF7FE;
+    padding: 15px 15px 5px 15px;
+    //border-radius: $radius;
+  }
+
+  .depth-2 {
+    //background: #FBF7FE;
+    border: 0;
+    border-left: 1px dashed $comment-color;
+    border-radius: 0;
+  }
+
+  // .alt {
+  //   margin-bottom: 10px;
+  // }
+
+  header {
+    display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: center;
+
+img {
+  border-radius: 50rem !important;
+  border: 1px solid $light-gray;
+  background-color: $white;
+  box-shadow: 1px 1px 1px $white;
+}
+
+.fn {
+  font-size: $lead;
+}
+  }
+
+  .comment-wrap {
+    font-size: $third;
+    display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+margin-left: 10px;
+  }
+
+  .comment-content {
+    padding-top: 15px;
+    p {
+      font-size: $secondary;
+      margin-bottom: 5px;
+    }
+  }
+
+  .post-author {
+    span {
+    font-size: $secondary;
+    color: $comment-color;
+  }
+}
+
+  .comment-reply-link {
+    font-size: $third;
+  }
+
+  #cancel-comment-reply-link {
+    font-size: $third;
+    margin-left: 15px;
+  }
+
+  .alert-info p {
+    padding-top: 5px;
+    margin-bottom: 0;
+    color: $alert-color;
+    font-size: $secondary;
+  }
+
+}
+
+
+
+
+.comment-respond {
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  font-size: $secondary;
+}
+form {
+  display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+
+textarea,
+input {
+  //width: 100%;
+  margin-bottom: math.div($spacer, 1.1);
+  font-weight: 300;
+  //padding: 15px;
+}
+
+.comment-form-cookies-consent {
+  input {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  label {
+    margin-left: 5px;
+    font-size: $third;
+  }
+}
+.submit {
+  padding: 10px;
+}
+}
+}
+
+@include media(600) {
+
+  .comments-area {
+  max-width: 500px;
+  margin: 0 auto;
+}
+}
+
+@include media(900) {
+  .comment-respond {
+  margin-bottom: $spacer;
+}
+}

@@ -1,0 +1,244 @@
+// =======================
+// Typography
+// =======================
+
+hr {
+  display: block;
+  clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  color: $font-color;
+  font-weight: 300;
+  clear: both; // remember this!
+  line-height: 1.2;
+  hyphens: none;
+  font-size: $font-size; //Remove to set browser default headings
+  //margin-bottom: math.div($spacer, 3);
+}
+
+p {
+  hyphens: none;
+}
+
+b,
+strong,
+dt {
+  font-weight: bolder;
+}
+
+i,
+em,
+dfn,
+cite,
+abbr,
+address,
+blockquote {
+  font-style: italic;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $medium-gray;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $light-gray;
+  text-decoration: none;
+}
+
+small {
+  font-size: 85%;
+}
+
+big {
+  font-size: 125%;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+  font-family: $code-font;
+  font-size: $secondary;
+  line-height: 1.5;
+}
+
+//give the elements bottom margin
+p,
+pre,
+address,
+blockquote,
+ul,
+ol,
+dl {
+  margin-bottom: $spacer;
+}
+
+ul ul,
+ol ol {
+  margin-bottom: 8px;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-top: 8px;
+}
+
+li > ul {
+  list-style: circle;
+}
+
+li {
+  font-size: math.div($font-size, 1.03);
+  margin-bottom: 5px;
+}
+
+li li {
+  font-size: math.div($font-size, 1.09);
+  margin-left: math.div($spacer, 2);
+}
+
+//inline list
+ul.inline li {
+  display: inline;
+  margin-right: math.div($spacer, 2);
+}
+
+dt {
+  margin-top: math.div($spacer, 4);
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+// consistant paragraphs
+.lead {
+  font-size: $lead;
+}
+
+.secondary {
+  font-size: $secondary;
+}
+
+.third {
+  font-size: $third;
+}
+
+//base heading sizes
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@include media(700) {
+  h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+}
+
+@include media(900) {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 200;
+}
+  
+  h1 {
+  font-size: 3.1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+}

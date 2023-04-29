@@ -1,0 +1,84 @@
+
+
+/* Do not show the outline on the skip link target. */
+#main[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.inner {
+  display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-between;
+align-items: center;
+border-bottom: 6px solid $light-gray;
+
+  h1 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+
+  p {
+    font-family: $heading-font;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: $spacer;
+  border-top: 1px dashed $light-gray;
+  padding-top: $spacer;
+}
+
+.site-footer-nav {
+
+  ul {
+    margin-bottom: 10px;
+    li {
+      display: inline;
+      font-size: $third;
+
+      a {
+        margin-left: 2px;
+      margin-right: 2px;
+      }
+
+      span {
+        margin-left: 2px;
+
+      }
+}
+}
+}
+
+.site-footer-nav li:last-child span {
+  display: none;
+}
+
+
+.site-info {
+  font-size: $third;
+}
+
+@include media(700) {
+  .site-footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.site-footer-nav {
+  ul {
+    margin-bottom: 0;
+  }
+}
+}
